@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+    <title>{{ title }}</title>
+</head>
+<body>
+   <h1>{{ title }}</h1>
+   <h2>{{ subtitle }}</h2>
+   <h3>{{ year }}</h3>
+   <div class="container">
+        <section>
+            <div><h4>Total Sales</h4></div>
+            <p>£ {{ total_sales }}</p>
+        </section>
+        <section>
+            <h4>Average Sales Over the Year</h4>
+            <p>£ {{ average_sales }}</p>
+        </section>
+        <section class="container">
+            <div>
+                <h4>Highest Sales</h4>
+                <p>{{ highest_month }} - £ {{ highest_value }}</p>
+            </div>
+            <div>
+                <h4>Lowest Sales</h4>
+                <p>{{ lowest_month }} - £ {{ lowest_value }}</p>
+            </div>
+        </section>
+        <section>
+            <p>Sales over the year</p>
+            <img src="{{ url_for('static', filename='saleschart.png')}}"/>
+        </section>
+
+   </div>
+
+    <footer>
+        <p>coded with 💖 by cristien & jade</p>
+        <p>a code first girls project</p>
+        <p>tech stack: python - flask for frontend, seaborn for visualisation </p>
+    </footer>
+</body>
+</html>
